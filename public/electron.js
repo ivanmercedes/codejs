@@ -20,11 +20,12 @@ function createWindow() {
   win.loadURL(
     isDev
       ? "http://localhost:3000"
-      : `file://${path.join(__dirname, "../dist/index.html")}`,
+      : `file://${path.join(__dirname, "../dist/index.html")}`
   );
   win.setMenuBarVisibility(false);
   // Open the DevTools.
   if (isDev) {
+    win.setMenuBarVisibility(true);
     win.webContents.openDevTools();
   }
 }

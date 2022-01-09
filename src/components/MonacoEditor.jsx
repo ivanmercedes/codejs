@@ -13,6 +13,7 @@ const MonacoEditor = () => {
   };
 
   const editorDidChange = (value, event) => {
+    console.log(event);
     updateStateCode(value);
   };
 

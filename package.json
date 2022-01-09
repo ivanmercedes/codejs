@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "dev": "concurrently -k \" npm start\" \"npm:electron\"",
     "electron": "wait-on tcp:3000 && electron .",
-    "package-win": "electron-packager . --overwrite --platform=win32 --asar --arch=x64 --icon=public/img/logo.ico --prune=true --out=release-builds"
+    "package-win": "electron-packager . --overwrite --platform=win32 --asar --arch=x64 --icon=public/img/logo.ico --prune=true --out=release-builds",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.3.1",
