@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import appContext from "../context/app/appContext";
-import logToString from "../hooks/logToString";
+import { useContext, useEffect } from "react";
+import useSandboxConsole from "../hooks/useSandboxConsole";
 
 import styled from "styled-components";
 
 const Div = styled.div`
-  padding: 1rem;
+  padding: 0;
   font-size: 1.3rem;
   width: 100%;
   font-family: Consolas, "Courier New", monospace;
@@ -21,16 +20,11 @@ const Div = styled.div`
 `;
 
 const Console = () => {
-  const AppContext = useContext(appContext);
-  const { code } = AppContext;
-  const response = logToString(code);
-
+  useSandboxConsole();
   return (
-    <Div
-      dangerouslySetInnerHTML={{
-        __html: response,
-      }}
-    />
+    <>
+      <Div className="console-log"></Div>
+    </>
   );
 };
 

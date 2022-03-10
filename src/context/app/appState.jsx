@@ -14,7 +14,7 @@ const appState = ({ children }) => {
   // Get code
   const setInitialState = async () => {
     const data = getDbData();
-    console.log(data);
+    // console.log(data);
     dispatch({
       type: types.getOldCode,
       payload: data,
@@ -22,7 +22,7 @@ const appState = ({ children }) => {
   };
 
   const updateStateCode = (value) => {
-    console.log(value);
+    // console.log(value);
     setDbData(value);
     dispatch({
       type: types.updateCode,

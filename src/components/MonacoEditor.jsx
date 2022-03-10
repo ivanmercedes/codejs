@@ -33,6 +33,7 @@ const MonacoEditor = () => {
           enabled: false,
         },
         deltaDecorations: false,
+        fontSize: 20,
       }}
       onMount={editorDidMount}
       onChange={editorDidChange}
